@@ -1,8 +1,11 @@
 const express = require("express")
-const axios = require("axios")
+const dotenv = require("dotenv")
+dotenv.config()
 const { sendFile } = require("express/lib/response");
 const client = require("@mailchimp/mailchimp_marketing");
 const app = express()
+
+
 
 client.setConfig({
     apiKey: process.env.KEY,
